@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monopoli", "Monopoli.csproj", "{B5331329-2F0F-42F7-B1A0-FB4B5C466347}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monopoli.Core", "..\Monopoli.Business\Monopoli.Core.csproj", "{B220F280-07DD-4878-9C47-B4FE88FEB916}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monopoli.Core", "..\Monopoli.Core\Monopoli.Core.csproj", "{B220F280-07DD-4878-9C47-B4FE88FEB916}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,29 +11,35 @@ namespace Monopoli.Entity
     {
         public string Name { get; protected set; }
 
-        public int Location { get; protected set; }
+        public int Casella { get; protected set; }
 
         private int Round { get; set; }
 
         public Player(string name)
         {
-            this.Location = 0;
+            this.Casella = 0;
             this.Round = 0;
             this.Name = name;
         }
 
-        public void muovi()
+        public void Muovi()
         {
             var valoreLancio = Dado.Lancia();
-            var maxCaselle = Convert.ToInt16(ConfigurationManager.AppSettings["MaxCaselle"]);
-            var risLancio = valoreLancio + this.Location;
 
-            if (risLancio >= maxCaselle)
-                this.Location = maxCaselle - risLancio;
-            else
-                this.Location = risLancio;
+            this.Casella = this.CalcolaValoreCasella(Dado.Lancia());
 
             this.Round++;
+        }
+
+        private int CalcolaValoreCasella(int valorelancio)
+        {
+            var maxCaselle = Convert.ToInt16(ConfigurationManager.AppSettings["MaxCaselle"]);
+            var risLancio = valorelancio + this.Casella;
+
+            if (risLancio >= maxCaselle)
+                return risLancio - maxCaselle;
+            else
+                return risLancio;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Monopoli.Entity
         public static int Lancia()
         {
             var dadiusati = Convert.ToInt16(ConfigurationManager.AppSettings["NumDadi"]);
-            return new Random().Next(0, 12) * dadiusati;
+            return new Random().Next(0, 6) * dadiusati;
         }
     }
 }

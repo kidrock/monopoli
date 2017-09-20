@@ -44,8 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\Dado.cs" />
-    <Compile Include="Entity\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -63,12 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Monopoli.Business\Monopoli.Core.csproj">
-      <Project>{b220f280-07dd-4878-9c47-b4fe88feb916}</Project>
-      <Name>Monopoli.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
