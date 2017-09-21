@@ -1,4 +1,0 @@
-E:\@\Progetti\monopoli\Monopoli.Business\bin\Debug\Monopoli.Business.dll
-E:\@\Progetti\monopoli\Monopoli.Business\bin\Debug\Monopoli.Business.pdb
-E:\@\Progetti\monopoli\Monopoli.Business\obj\Debug\Monopoli.Business.dll
-E:\@\Progetti\monopoli\Monopoli.Business\obj\Debug\Monopoli.Business.pdb
