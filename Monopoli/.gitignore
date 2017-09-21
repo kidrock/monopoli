@@ -17,9 +17,9 @@
 *.userprefs
 
 # Build results
-bin
-obj
-config
+bin/
+obj/
+config/
 
 # Visual Studio 2015 cache/options directory
 .vs/
