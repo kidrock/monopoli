@@ -16,7 +16,7 @@ namespace Monopoli.Business.Model
         {
             int numGiocatori = giocatori.Count();
             if (numGiocatori < 2 || numGiocatori > 8)
-                throw new Exception(string.Format("Si sta giocando in {0}.Il nunmero di giortori non è compreso tra {1} e {2}", numGiocatori, 2, 8));
+                throw new Exception(string.Format("Si sta giocando in {0}.Il nunmero di giocatori non è compreso tra {1} e {2}", numGiocatori, 2, 8));
 
             Gioco gioco = new Gioco();
             Random rnd = new Random();
