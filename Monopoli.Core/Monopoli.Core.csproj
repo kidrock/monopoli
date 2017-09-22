@@ -41,9 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\Dado.cs" />
-    <Compile Include="Entity\Gioco.cs" />
-    <Compile Include="Entity\Player.cs" />
+    <Compile Include="Domain\Model\Dado.cs" />
+    <Compile Include="Domain\Model\Gioco.cs" />
+    <Compile Include="Domain\Model\Player.cs" />
+    <Compile Include="Domain\Service\PlayerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

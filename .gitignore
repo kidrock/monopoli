@@ -3,3 +3,6 @@
 ################################################################################
 
 /Monopoli.Core/obj/Debug
+/Monopoli.Core/bin/Debug
+/Monopoli.Test/bin/Debug
+/Monopoli.Test/obj/Debug

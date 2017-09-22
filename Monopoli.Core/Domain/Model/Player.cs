@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Monopoli.Entity
+namespace Monopoli.Model
 {
     public class Player
     {
@@ -27,14 +27,9 @@ namespace Monopoli.Entity
             return player;
         }
 
-        public void Muovi(int valoreDado)
+        public void Update(int casella)
         {
-            var prossimaCasella = valoreDado + this.Casella;
-
-            if (prossimaCasella >= 39)
-                this.Casella = prossimaCasella - 39;
-            else
-                this.Casella = prossimaCasella;
+            this.Casella = casella;
         }
 
     }
