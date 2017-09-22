@@ -3,12 +3,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Monopoli.Business.Model;
 using System.Collections.Generic;
 using Monopoli.Model;
+using Monopoli.Business.Domain.Service;
 
 namespace Monopoli.Test
 {
     [TestClass]
     public class GiocoTestModel
     {
+        private int MAX_TURNI = 20;
+        private int MAX_CARTELLE = 39;
         private List<Player> GIOCATORI = new List<Player>() { Player.Create("Cavallo"), Player.Create("Macchina") };
 
         [TestMethod]
@@ -38,5 +41,27 @@ namespace Monopoli.Test
                                                             Player.Create("Moto")};
             Gioco gioco = Gioco.Create(giocatori);
         }
+
+
+        [TestMethod]
+        public void Controlla_Ogni_Giocatore_Completa_Turni()
+        {
+            Gioco gioco = Gioco.Create(new List<Player>() { Player.Create("Cavallo"), Player.Create("Macchina") });
+            PlayerService ps = new PlayerService(MAX_CARTELLE, MAX_TURNI);
+
+            for (int i = 0; i < MAX_TURNI; i++)
+            {
+                gioco.UpdateTurno();
+
+                foreach (var giocatore in gioco.Giocatori)
+                {
+                    ps.Muovi(giocatore, Dado.Lancia());
+                }
+            }
+
+            Assert.AreEqual(gioco.Turno, this.MAX_TURNI);
+            Assert.AreEqual(gioco.Giocatori.TrueForAll(g => g.Turno == this.MAX_TURNI), true);
+        }
+
     }
 }

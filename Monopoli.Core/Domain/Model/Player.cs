@@ -13,9 +13,12 @@ namespace Monopoli.Model
 
         public int Casella { get; protected set; }
 
+        public int Turno { get; protected set; }
+
         private Player()
         {
             this.Casella = 0;
+            this.Turno = 0;
         }
 
         public static Player Create(string nome)
@@ -30,7 +33,7 @@ namespace Monopoli.Model
         public void Update(int casella)
         {
             this.Casella = casella;
+            this.Turno += 1;
         }
-
     }
 }
