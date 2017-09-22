@@ -20,7 +20,7 @@ namespace Monopoli.Business.Model
             Gioco gioco = new Gioco();
             Random rnd = new Random();
 
-            gioco.Giocatori = giocatori.OrderBy<Player, int>((item) => rnd.Next(0, giocatori.Count())).ToList();
+            gioco.Giocatori = giocatori.OrderBy(p => rnd.Next(0, giocatori.Count())).ToList();
 
             return gioco;
         }
